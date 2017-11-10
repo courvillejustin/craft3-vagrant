@@ -8,6 +8,7 @@ DB='craft3'
 apt-get update -y
 apt-get install -y apache2
 sudo apt-get install -y python-software-properties
+sudo apt-get install -y build-essential
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update -y
 sudo apt-get install -y php7.1 --allow-unauthenticated
@@ -36,6 +37,8 @@ EOF
 )
 sudo echo "${VHOST}" > /etc/apache2/sites-enabled/000-default.conf
 sudo service apache2 restart
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 composer self-update
 composer create-project craftcms/craft /vagrant/craft -s beta
