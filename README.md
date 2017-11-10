@@ -12,8 +12,7 @@ If you are using Windows, you will need to ensure that VT-x is enabled in your B
 
 1. Check this repository out to a local folder and cd into the folder
 ```
- git clone https://Adpearance-Shared@bitbucket.org/adp-developers/craft-3-vagrant.git
- cd craft-3-vagrant
+ cd craft3-vagrant
 ```
 
 2. Edit the "vagrant-bootstrap.sh" file, replacing DB and DBPASS with your config
